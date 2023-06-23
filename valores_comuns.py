@@ -561,7 +561,7 @@ def gerar_resultados():
 
         # Reordenar as colunas
         df_result = df_result[['Partidas atrás', 'Ambas marcaram', 'Ambas não marcaram']]
-        st.write('Verificando '+ str(valor_partida) + ' após a ocorrência do padrão, esses foram os valores em comum em 10 partidas que deram certo e em 10 partidas que deram errado')
+        st.write('Verificando '+ str(valor_partida) + ' partidas após a ocorrência do padrão, esses foram os valores em comum em 10 partidas que deram certo e em 10 partidas que deram errado')
         st.write(df_result)
 
 # Botão "Gerar resultados"
