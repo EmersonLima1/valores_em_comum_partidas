@@ -141,7 +141,7 @@ def gerar_resultados():
       resultado_analise = analisar_partidas(df, primeiro_tempo, tempo_final, num_total_partidas, num_conjuntos)
 
       st.write('No conjunto de dados ' + sheet_name)
-      st.write('O padrão ' + primeiro_tempo + 'no Primeiro tempo e ' + tempo_final + ' no tempo final aconteceu em ' + len(resultado_analise) + ' partidas')
+      st.write('O padrão ' + primeiro_tempo + 'no Primeiro tempo e ' + tempo_final + ' no tempo final aconteceu em ' + str(len(resultado_analise)) + ' partidas')
 
       def criar_novo_dicionario(resultado_analise, num_total_partidas):
           novo_dicionario = {}
