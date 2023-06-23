@@ -121,10 +121,10 @@ def gerar_resultados():
                   conjunto_partidas = []
                   for j in range(num_conjuntos):
                       indice = i + j + 1
-                      if indice < len(df):
-                         partida_tempo_final = df.loc[indice, 'Tempo final']
-                         partida_primeiro_tempo = df.loc[indice, 'Primeiro tempo']
-                         conjunto_partidas.append((partida_primeiro_tempo, partida_tempo_final))
+                      if indice < len(df.index):
+                          partida_tempo_final = df.loc[indice, 'Tempo final']
+                          partida_primeiro_tempo = df.loc[indice, 'Primeiro tempo']
+                          conjunto_partidas.append((partida_primeiro_tempo, partida_tempo_final))
                   lista_partidas.append(conjunto_partidas)
 
               resultado[partida] = lista_partidas
