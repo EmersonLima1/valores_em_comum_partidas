@@ -129,7 +129,7 @@ def gerar_resultados():
 
               resultado[partida] = lista_partidas
 
-      return resultado
+          return resultado
 
       # Solicitar informações do usuário
       primeiro_tempo = primeiro_tempo1
