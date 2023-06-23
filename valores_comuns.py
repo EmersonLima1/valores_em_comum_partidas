@@ -101,7 +101,7 @@ def gerar_resultados():
       # Remover células com valor "?"
       df_novo = df_novo[(df_novo['Primeiro tempo'] != '?') & (df_novo['Tempo final'] != '?')]
 
-      df = df_novo
+      df_analisar_st = df_novo
 
       # Transformar o dataframe em um dicionário
 
@@ -137,8 +137,11 @@ def gerar_resultados():
       num_total_partidas = 20
       num_conjuntos = 3
 
+      # Redefinir o índice do DataFrame df_analisar_st
+      df_analisar_st.reset_index(drop=True, inplace=True)
+
       # Chamada da função para análise das partidas
-      resultado_analise = analisar_partidas(df, primeiro_tempo, tempo_final, num_total_partidas, num_conjuntos)
+      resultado_analise = analisar_partidas(df_analisar_st, primeiro_tempo, tempo_final, num_total_partidas, num_conjuntos)
 
       st.write('No conjunto de dados ' + sheet_name)
       st.write('O padrão ' + primeiro_tempo + ' no Primeiro tempo e ' + tempo_final + ' no Tempo final aconteceu em ' + str(len(resultado_analise)) + ' partidas')
