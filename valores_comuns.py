@@ -134,7 +134,7 @@ def gerar_resultados():
       # Solicitar informações do usuário
       primeiro_tempo = primeiro_tempo1
       tempo_final = tempo_final1
-      num_total_partidas = num_total_partidas
+      num_total_partidas = 20
       num_conjuntos = 3
 
       # Chamada da função para análise das partidas
