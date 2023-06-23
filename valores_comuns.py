@@ -120,16 +120,16 @@ def gerar_resultados():
               for i in range(inicio, fim):
                   conjunto_partidas = []
                   for j in range(num_conjuntos):
-                      if i + j + 1 >= len(df):
-                          break  # Ignorar conjuntos que ultrapassam o tamanho do DataFrame
-                      partida_tempo_final = df.loc[i+j+1, 'Tempo final']
-                      partida_primeiro_tempo = df.loc[i+j+1, 'Primeiro tempo']
-                      conjunto_partidas.append((partida_primeiro_tempo, partida_tempo_final))
+                      indice = i + j + 1
+                      if indice < len(df):
+                         partida_tempo_final = df.loc[indice, 'Tempo final']
+                         partida_primeiro_tempo = df.loc[indice, 'Primeiro tempo']
+                         conjunto_partidas.append((partida_primeiro_tempo, partida_tempo_final))
                   lista_partidas.append(conjunto_partidas)
 
               resultado[partida] = lista_partidas
 
-          return resultado
+              return resultado
 
       # Solicitar informações do usuário
       primeiro_tempo = primeiro_tempo1
